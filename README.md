@@ -1,7 +1,7 @@
 # Swipes View Library (iOS)
 [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) (a Tinder-like View) displays **views (or cards) to be swiped** in all **directions of your choice** and also allows you to **programatically swipe** (with a button or a command).
 
-![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03162016012902.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03162016013504.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03212016160353.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03212016160804.gif "UISwipesView")
+![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/basic.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/components.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/advanced.gif "UISwipesView")
 
 On this page, you can:
 * [Download the latest version](https://github.com/Operators/swipes-view-ios/files/183224/Swipes.zip) of the library
@@ -37,7 +37,8 @@ The [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesVi
 ```
     
 Alternatively [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) can be defined in XCode IB:
-![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03162016012902.gif "UISwipesView")
+
+![inspector](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/ib_inspector.png "Interface Builder")
    
 Passing Data
 ---------------
