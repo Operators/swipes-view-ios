@@ -160,7 +160,7 @@ The [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesVi
     
 	// There needs to be a filter on the views
 	BOOL isCurrentView = [self isEqual:card.yourClassObject];
-    if(isCurrentView) self.viewState = @"New State"; // Reset view state, possibly for reuse
+    if(isCurrentView) self.label.text = @"New State"; // Reset view state, possibly for reuse
 	
 }
 ```
