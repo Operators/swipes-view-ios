@@ -1,5 +1,5 @@
 # Swipes View Library (iOS)
-[UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.html) (a Tinder-like View) displays **views (or cards) to be swiped** in all **directions of your choice** and also allows you to **programatically swipe** (with a button or a command).
+[UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) (a Tinder-like View) displays **views (or cards) to be swiped** in all **directions of your choice** and also allows you to **programatically swipe** (with a button or a command).
 
 ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03162016012902.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03162016013504.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03212016160353.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03212016160804.gif "UISwipesView")
 
@@ -18,7 +18,7 @@ Happy Swiping, :)
 Setup
 -----
 
-The [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.html) can be defined programmatically in Objective-C (or Swift):
+The [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) can be defined programmatically in Objective-C (or Swift):
 ```    
     //The array defines which directions the UISwipesView will swipe to
     NSNumber * directions = @[[Directions LEFT], [Directions.RIGHT]];
@@ -27,15 +27,15 @@ The [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swip
 	[swipesView setAllowedDirections:directions]; //setAllowedDirections(Directions.RIGHT, Directions.DOWN);
 ```
     
-Alternatively [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.html) can be defined in XCode IB:
+Alternatively [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) can be defined in XCode IB:
 ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/d2ucKOT49Hchristopher03162016012902.gif "UISwipesView")
    
 Passing Data
 ---------------
 
-Data must be passed to the [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.html) from a [UISwipesViewDataSource](http://operators.github.io/swipes-view-ios/com/operators/swipes/SwipesAdapter.html) implementation, and using a [UISwipesViewCell](http://operators.github.io/swipes-view-ios/com/operators/swipes/SwipesAdapter.html).
+Data must be passed to the [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) from a [UISwipesViewDataSource](http://operators.github.io/swipes-view-ios/Classes/SwipesAdapter.html) implementation, and using a [UISwipesViewCell](http://operators.github.io/swipes-view-ios/Classes/SwipesAdapter.html).
 
-A basic example of a [UISwipesViewCell](http://operators.github.io/swipes-view-ios/com/operators/swipes/SwipesAdapter.html) subclass would look as follows:
+A basic example of a [UISwipesViewCell](http://operators.github.io/swipes-view-ios/Classes/SwipesAdapter.html) subclass would look as follows:
 ```	
 @interface BasicCardCell : UISwipesViewCell
 @property (strong, nonatomic) UILabel *label;
@@ -43,7 +43,7 @@ A basic example of a [UISwipesViewCell](http://operators.github.io/swipes-view-i
 
 ```
 
-A basic example of a [UISwipesViewCell](http://operators.github.io/swipes-view-ios/com/operators/swipes/SwipesAdapter.html) implementation accepting data would look as follows:
+A basic example of a [UISwipesViewCell](http://operators.github.io/swipes-view-ios/Classes/SwipesAdapter.html) implementation accepting data would look as follows:
 ```	
 - (UISwipesViewCell *)swipesView:(UISwipesView *)swipesView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -58,7 +58,7 @@ A basic example of a [UISwipesViewCell](http://operators.github.io/swipes-view-i
 Automating Swipes
 ---------------
 
-The [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.html) can swipe programatically as well, ideally through a button click (or some other action):
+The [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) can swipe programatically as well, ideally through a button click (or some other action):
 ```
 	UIButton swipeLeftButton = [[UIButton alloc] init];
     [swipeLeftButton 
@@ -88,9 +88,9 @@ The [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swip
 Listening For Swipe Actions
 ---------------
 
-The [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.html) can have multiple listeners. Card components (as well as Views or Controllers) can listen for swipes all simultaneously:
+The [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) can have multiple listeners. Card components (as well as Views or Controllers) can listen for swipes all simultaneously:
 	
-* First update your class to implement [UISwipesViewDelegate](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.OnSwipeListener.html)
+* First update your class to implement [UISwipesViewDelegate](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.OnSwipeListener.html)
 ```
 @interface YourClass : UIView <UISwipesViewDelegate>
 @property (strong, nonatomic) Directions *direction;
@@ -111,9 +111,9 @@ The [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swip
 }
 @end
 ```
-* Alternatively, you can update your protocols to extend [UISwipesViewDelegate](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.OnSwipeListener.html)
+* Alternatively, you can update your protocols to extend [UISwipesViewDelegate](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.OnSwipeListener.html)
 	
-* Next place the addSwipesListener reference along with your implementation of [UISwipesViewDelegate](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.OnSwipeListener.html).
+* Next place the addSwipesListener reference along with your implementation of [UISwipesViewDelegate](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.OnSwipeListener.html).
 ```
 @implementation YourClass
 - (id)initWithFrame:(CGRect)frame {
@@ -132,9 +132,9 @@ The [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swip
 ```
 
 
-**Once that is complete, you're ready to listen for [onThresholdChange](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.OnSwipeListener.html#onThresholdChange(ios.view.View, float)), [onDirectionSwipe](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.OnSwipeListener.html#onDirectionSwipe(ios.view.View, com.operators.swipes.UISwipesView.Directions)) or [onSuccessfulSwipe](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.OnSwipeListener.html#onSuccessfulSwipe(ios.view.View, com.operators.swipes.UISwipesView.Directions)).**
+**Once that is complete, you're ready to listen for [onThresholdChange](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.OnSwipeListener.html#onThresholdChange(ios.view.View, float)), [onDirectionSwipe](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.OnSwipeListener.html#onDirectionSwipe(ios.view.View, com.operators.swipes.UISwipesView.Directions)) or [onSuccessfulSwipe](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.OnSwipeListener.html#onSuccessfulSwipe(ios.view.View, com.operators.swipes.UISwipesView.Directions)).**
 
-* The [onThresholdChange](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.OnSwipeListener.html#onThresholdChange(ios.view.View, float)) Swipe Action provides feedback on what amount the swipe is complete. An Example of this would look as follows:
+* The [onThresholdChange](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.OnSwipeListener.html#onThresholdChange(ios.view.View, float)) Swipe Action provides feedback on what amount the swipe is complete. An Example of this would look as follows:
 ```
 
 
@@ -144,13 +144,13 @@ The [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swip
     
 }
 ```
-* The [onDirectionSwipe](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.OnSwipeListener.html#onDirectionSwipe(ios.view.View, com.operators.swipes.UISwipesView.Directions)) Swipe Action provides feedback on what direction the swipe is going. An Example of this would look as follows:
+* The [onDirectionSwipe](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.OnSwipeListener.html#onDirectionSwipe(ios.view.View, com.operators.swipes.UISwipesView.Directions)) Swipe Action provides feedback on what direction the swipe is going. An Example of this would look as follows:
 ```
 - (void)onDirectionSwipe:(UISwipesViewCell*)card direction:(Directions*)direction {
     self.direction = direction;// Reset the direction state wthin some object
 }
 ```
-* The [onSuccessfulSwipe](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.OnSwipeListener.html#onSuccessfulSwipe(ios.view.View, com.operators.swipes.UISwipesView.Directions)) Swipe Action provides feedback on what direction the sucessful swipe was going. An Example of this would look as follows:
+* The [onSuccessfulSwipe](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.OnSwipeListener.html#onSuccessfulSwipe(ios.view.View, com.operators.swipes.UISwipesView.Directions)) Swipe Action provides feedback on what direction the sucessful swipe was going. An Example of this would look as follows:
 ```
 - (void)onSuccessfulSwipe:(UISwipesViewCell*)card direction:(Directions*)direction {
     
@@ -164,9 +164,9 @@ The [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swip
 Further Reading
 ---------------
 
-See the [Documentation](http://operators.github.io/swipes-view-ios) for more on the [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.html), or [UISwipesViewDataSource](http://operators.github.io/swipes-view-ios/com/operators/swipes/SwipesAdapter.html) functions.
+See the [Documentation](http://operators.github.io/swipes-view-ios) for more on the [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html), or [UISwipesViewDataSource](http://operators.github.io/swipes-view-ios/Protocols/UISwipesViewDataSource.html) functions.
 
-See the [MAC Guides](#) for detailed examples of how to use the [UISwipesView](http://operators.github.io/swipes-view-ios/com/operators/swipes/UISwipesView.html).
+See the [MAC Guides](#) for detailed examples of how to use the [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html).
 * Like with a [Basic Example](#)
 * Interacting with other [View Components](#)
 * Or with [UISwipesViewDelegates](#).
