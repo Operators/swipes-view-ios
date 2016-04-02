@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">SwipesObjCExamples </a>
+				<a href="../index.html">UISwipesView Library </a>
 			</h1>
 
 			<p id="developer-home">
@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -54,31 +56,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/collectionView">collectionView</option>
-		
-		<option value="//api/name/collectionViewLayout">collectionViewLayout</option>
-		
 		<option value="//api/name/dataSource">dataSource</option>
-		
-		<option value="//api/name/direction_down">direction_down</option>
-		
-		<option value="//api/name/direction_left">direction_left</option>
-		
-		<option value="//api/name/direction_right">direction_right</option>
-		
-		<option value="//api/name/direction_up">direction_up</option>
-		
-		<option value="//api/name/loadedFromNib">loadedFromNib</option>
-		
-		<option value="//api/name/mAllowedDirections">mAllowedDirections</option>
-		
-		<option value="//api/name/maxVisibleCards">maxVisibleCards</option>
-		
-		<option value="//api/name/swipeRotation">swipeRotation</option>
-		
-		<option value="//api/name/swipesManager">swipesManager</option>
-		
-		<option value="//api/name/visibleCard">visibleCard</option>
 		
 	</optgroup>
 	
@@ -88,47 +66,17 @@
 		
 		<option value="//api/name/addUISwipesViewDelegate:">+ addUISwipesViewDelegate:</option>
 		
-		<option value="//api/name/initialize">+ initialize</option>
-		
 	</optgroup>
 	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/addAllowedDirections:">- addAllowedDirections:</option>
-		
-		<option value="//api/name/addSubview:">- addSubview:</option>
-		
-		<option value="//api/name/awakeFromNib">- awakeFromNib</option>
-		
 		<option value="//api/name/cellForItemAtIndexPath:">- cellForItemAtIndexPath:</option>
-		
-		<option value="//api/name/collectionView:cellForItemAtIndexPath:">- collectionView:cellForItemAtIndexPath:</option>
-		
-		<option value="//api/name/collectionView:numberOfItemsInSection:">- collectionView:numberOfItemsInSection:</option>
 		
 		<option value="//api/name/dequeueReusableCellWithReuseIdentifier:forIndexPath:">- dequeueReusableCellWithReuseIdentifier:forIndexPath:</option>
 		
-		<option value="//api/name/getRotation">- getRotation</option>
-		
-		<option value="//api/name/getSelectedView">- getSelectedView</option>
-		
 		<option value="//api/name/indexPathForItemAtPoint:">- indexPathForItemAtPoint:</option>
-		
-		<option value="//api/name/initWithCoder:">- initWithCoder:</option>
-		
-		<option value="//api/name/initWithFrame:">- initWithFrame:</option>
-		
-		<option value="//api/name/isAllowed:">- isAllowed:</option>
-		
-		<option value="//api/name/numberOfSectionsInCollectionView:">- numberOfSectionsInCollectionView:</option>
-		
-		<option value="//api/name/onDirectionChange:">- onDirectionChange:</option>
-		
-		<option value="//api/name/onSuccessfulSwipe:">- onSuccessfulSwipe:</option>
-		
-		<option value="//api/name/onThresholdChange:">- onThresholdChange:</option>
 		
 		<option value="//api/name/performBatchUpdates:completion:">- performBatchUpdates:completion:</option>
 		
@@ -145,18 +93,6 @@
 		<option value="//api/name/reloadData">- reloadData</option>
 		
 		<option value="//api/name/setAllowedDirections:">- setAllowedDirections:</option>
-		
-		<option value="//api/name/setBackgroundColor:">- setBackgroundColor:</option>
-		
-		<option value="//api/name/setCenter:">- setCenter:</option>
-		
-		<option value="//api/name/setDelegate:">- setDelegate:</option>
-		
-		<option value="//api/name/setFrame:">- setFrame:</option>
-		
-		<option value="//api/name/setUpDefaults">- setUpDefaults</option>
-		
-		<option value="//api/name/swipeVisibleCard:">- swipeVisibleCard:</option>
 		
 	</optgroup>
 	
@@ -182,12 +118,27 @@
 	<td>UIView</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>UISwipesView.h<br />UISwipesView.m</td>
+	<td>UISwipesView.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The Swipes View is a new implementation of iOS&rsquo;s CollectionView specifically made for 4 directional swiping. This implementation is loosely based upon Tinder&rsquo;s Like/Nope Swiping action. <br/><br/>As in the example below, to pass data to the UISwipesView, the UISwipesViewDataSource needs to be implemented and passed to SwipesView dataSource.</p>
+
+<pre><code> UISwipesView *swipesView = [[UISwipesView alloc] init];
+ // Or from Storyboard Outlet (self.swipesView)
+
+ swipesView.dataSource = someController;
+ // Or Class the implements UISwipesViewDataSource
+</code></pre>
+					</div>
+					
+					
 
 					
 					
@@ -196,220 +147,10 @@
 						
 
 						
-						<h2 class="task-title">Other Methods</h2>
+						
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/direction_left" title="direction_left"></a>
-	<h3 class="method-title"><code><a href="#//api/name/direction_left">&nbsp;&nbsp;direction_left</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Allows left swipes
-*</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable BOOL direction_left</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">UISwipesView.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/direction_down" title="direction_down"></a>
-	<h3 class="method-title"><code><a href="#//api/name/direction_down">&nbsp;&nbsp;direction_down</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Allows down swipes
-*</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable BOOL direction_down</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">UISwipesView.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/direction_right" title="direction_right"></a>
-	<h3 class="method-title"><code><a href="#//api/name/direction_right">&nbsp;&nbsp;direction_right</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Allows right swipes
-*</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable BOOL direction_right</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">UISwipesView.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/direction_up" title="direction_up"></a>
-	<h3 class="method-title"><code><a href="#//api/name/direction_up">&nbsp;&nbsp;direction_up</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Allows up swipes
-*</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable BOOL direction_up</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">UISwipesView.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/swipeRotation" title="swipeRotation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/swipeRotation">&nbsp;&nbsp;swipeRotation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Allows changes in swipe rotation
-*</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable CGFloat swipeRotation</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">UISwipesView.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/dataSource" title="dataSource"></a>
 	<h3 class="method-title"><code><a href="#//api/name/dataSource">&nbsp;&nbsp;dataSource</a></code>
 </h3>
@@ -421,22 +162,6 @@
 			
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;UISwipesViewDataSource&gt; dataSource</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/visibleCard" title="visibleCard"></a>
-	<h3 class="method-title"><code><a href="#//api/name/visibleCard">&nbsp;&nbsp;visibleCard</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UISwipesViewCell *visibleCard</code></div>
 
 		    
 		</div>
@@ -629,454 +354,6 @@
 			
 
 			<div class="method-subsection method-declaration"><code>- (nullable UISwipesViewCell *)cellForItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
-
-		    
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						
-						<h2 class="task-title">Other Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/initialize" title="initialize"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initialize">+&nbsp;initialize</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>+ (void)initialize</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/initWithFrame:" title="initWithFrame:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithFrame:">&ndash;&nbsp;initWithFrame:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(CGRect)<em>frame</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/initWithCoder:" title="initWithCoder:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithCoder:">&ndash;&nbsp;initWithCoder:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (id)initWithCoder:(NSCoder *)<em>aDecoder</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setUpDefaults" title="setUpDefaults"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setUpDefaults">&ndash;&nbsp;setUpDefaults</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)setUpDefaults</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/awakeFromNib" title="awakeFromNib"></a>
-	<h3 class="method-title"><code><a href="#//api/name/awakeFromNib">&ndash;&nbsp;awakeFromNib</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)awakeFromNib</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addSubview:" title="addSubview:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addSubview:">&ndash;&nbsp;addSubview:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)addSubview:(UIView *)<em>view</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addAllowedDirections:" title="addAllowedDirections:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addAllowedDirections:">&ndash;&nbsp;addAllowedDirections:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)addAllowedDirections:(Directions *)<em>d</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setDelegate:" title="setDelegate:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setDelegate:">&ndash;&nbsp;setDelegate:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)setDelegate:(id&lt;UISwipesViewDelegate&gt;)<em>delegate</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setBackgroundColor:" title="setBackgroundColor:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setBackgroundColor:">&ndash;&nbsp;setBackgroundColor:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)setBackgroundColor:(UIColor *)<em>color</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setCenter:" title="setCenter:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setCenter:">&ndash;&nbsp;setCenter:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)setCenter:(CGPoint)<em>center</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setFrame:" title="setFrame:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setFrame:">&ndash;&nbsp;setFrame:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)setFrame:(CGRect)<em>frame</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/collectionView:numberOfItemsInSection:" title="collectionView:numberOfItemsInSection:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/collectionView:numberOfItemsInSection:">&ndash;&nbsp;collectionView:numberOfItemsInSection:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (int)collectionView:(UICollectionView *)<em>collectionView</em> numberOfItemsInSection:(NSInteger)<em>section</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/numberOfSectionsInCollectionView:" title="numberOfSectionsInCollectionView:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/numberOfSectionsInCollectionView:">&ndash;&nbsp;numberOfSectionsInCollectionView:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (int)numberOfSectionsInCollectionView:(UICollectionView *)<em>collectionView</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/collectionView:cellForItemAtIndexPath:" title="collectionView:cellForItemAtIndexPath:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/collectionView:cellForItemAtIndexPath:">&ndash;&nbsp;collectionView:cellForItemAtIndexPath:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (UICollectionViewCell *)collectionView:(UICollectionView *)<em>collectionView</em> cellForItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/onSuccessfulSwipe:" title="onSuccessfulSwipe:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/onSuccessfulSwipe:">&ndash;&nbsp;onSuccessfulSwipe:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)onSuccessfulSwipe:(Directions *)<em>direction</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/onDirectionChange:" title="onDirectionChange:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/onDirectionChange:">&ndash;&nbsp;onDirectionChange:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)onDirectionChange:(Directions *)<em>direction</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/onThresholdChange:" title="onThresholdChange:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/onThresholdChange:">&ndash;&nbsp;onThresholdChange:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)onThresholdChange:(float)<em>threshold</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/isAllowed:" title="isAllowed:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isAllowed:">&ndash;&nbsp;isAllowed:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (BOOL)isAllowed:(Directions *)<em>direction</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/getRotation" title="getRotation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getRotation">&ndash;&nbsp;getRotation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (CGFloat)getRotation</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/getSelectedView" title="getSelectedView"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getSelectedView">&ndash;&nbsp;getSelectedView</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (UISwipesViewCell *)getSelectedView</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/swipeVisibleCard:" title="swipeVisibleCard:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/swipeVisibleCard:">&ndash;&nbsp;swipeVisibleCard:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)swipeVisibleCard:(Directions *)<em>direction</em></code></div>
-
-		    
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						<a title="Extension Methods" name="task_Extension Methods"></a>
-						<h2 class="task-title">Extension Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/collectionView" title="collectionView"></a>
-	<h3 class="method-title"><code><a href="#//api/name/collectionView">&nbsp;&nbsp;collectionView</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UICollectionView *collectionView</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/collectionViewLayout" title="collectionViewLayout"></a>
-	<h3 class="method-title"><code><a href="#//api/name/collectionViewLayout">&nbsp;&nbsp;collectionViewLayout</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UICollectionViewLayout *collectionViewLayout</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/loadedFromNib" title="loadedFromNib"></a>
-	<h3 class="method-title"><code><a href="#//api/name/loadedFromNib">&nbsp;&nbsp;loadedFromNib</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL loadedFromNib</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/mAllowedDirections" title="mAllowedDirections"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mAllowedDirections">&nbsp;&nbsp;mAllowedDirections</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) int mAllowedDirections</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/maxVisibleCards" title="maxVisibleCards"></a>
-	<h3 class="method-title"><code><a href="#//api/name/maxVisibleCards">&nbsp;&nbsp;maxVisibleCards</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) float maxVisibleCards</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/swipesManager" title="swipesManager"></a>
-	<h3 class="method-title"><code><a href="#//api/name/swipesManager">&nbsp;&nbsp;swipesManager</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic) OSwipesManager *swipesManager</code></div>
 
 		    
 		</div>

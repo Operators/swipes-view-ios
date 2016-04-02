@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">SwipesObjCExamples </a>
+				<a href="../index.html">UISwipesView Library </a>
 			</h1>
 
 			<p id="developer-home">
@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -51,12 +53,6 @@
 	
 
 	
-	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/bit">bit</option>
-		
-	</optgroup>
 	
 
 	
@@ -70,19 +66,13 @@
 		
 		<option value="//api/name/UP">+ UP</option>
 		
-		<option value="//api/name/directionWithInt:">+ directionWithInt:</option>
-		
 	</optgroup>
 	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/bits">- bits</option>
-		
 		<option value="//api/name/description">- description</option>
-		
-		<option value="//api/name/init:">- init:</option>
 		
 	</optgroup>
 	
@@ -108,12 +98,34 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>UISwipesView.h<br />UISwipesView.m</td>
+	<td>UISwipesView.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The Directions are abstractions of 4 directional swipe operations. They
+allow the swiping away of the currently viewed card (or View), to the top, bottom, left or right of the screen.
+</br></br>The following are the Directions Class' Values: </br>
+<a href="#//api/name/LEFT">[Directions LEFT]</a> <a href="#//api/name/DOWN">[Directions DOWN]</a> <a href="#//api/name/RIGHT">[Directions RIGHT]</a> <a href="#//api/name/UP">[Directions UP]</a></br></p>
+
+<p>Objective-C Usage Example:</br></p>
+
+<pre><code>UISwipesView *swipesView = [[UISwipesView alloc] init];
+// Or from Storyboard Outlet (self.swipesView)
+
+NSArray * directions = @[[Directions LEFT], [Directions RIGHT]];
+// Or from Storyboard Options (Direction left, ...)
+
+[swipesView setAllowedDirections:directions];
+</code></pre>
+					</div>
+					
+					
 
 					
 					
@@ -122,7 +134,7 @@
 						
 
 						
-						<h2 class="task-title">Other Methods</h2>
+						
 
 						<div class="task-list">
 							<div class="section-method">
@@ -299,90 +311,35 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Human readable string representing the direction</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (NSString *)description</code></div>
 
 		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/bits" title="bits"></a>
-	<h3 class="method-title"><code><a href="#//api/name/bits">&ndash;&nbsp;bits</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (int)bits</code></div>
-
-		    
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						
-						<h2 class="task-title">Other Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/init:" title="init:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/init:">&ndash;&nbsp;init:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (id)init:(int)<em>input</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/directionWithInt:" title="directionWithInt:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/directionWithInt:">+&nbsp;directionWithInt:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>+ (Directions *)directionWithInt:(int)<em>input</em></code></div>
-
-		    
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						<a title="Extension Methods" name="task_Extension Methods"></a>
-						<h2 class="task-title">Extension Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/bit" title="bit"></a>
-	<h3 class="method-title"><code><a href="#//api/name/bit">&nbsp;&nbsp;bit</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) int bit</code></div>
+			
 
-		    
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">SwipesObjCExamples </a>
+				<a href="../index.html">UISwipesView Library </a>
 			</h1>
 
 			<p id="developer-home">
@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -58,17 +60,17 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/numberOfSectionsInSwipesView:">- numberOfSectionsInSwipesView:</option>
-		
 		<option value="//api/name/swipesView:cellForItemAtIndexPath:">- swipesView:cellForItemAtIndexPath:</option>
 		
-		<option value="//api/name/swipesView:deleteItemFromDataSourceAtIndexPath:">- swipesView:deleteItemFromDataSourceAtIndexPath:</option>
-		
-		<option value="//api/name/swipesView:layout:centerForItemAtIndexPath:">- swipesView:layout:centerForItemAtIndexPath:</option>
-		
-		<option value="//api/name/swipesView:layout:sizeForItemAtIndexPath:">- swipesView:layout:sizeForItemAtIndexPath:</option>
+		<option value="//api/name/swipesView:centerForItemAtIndexPath:">- swipesView:centerForItemAtIndexPath:</option>
 		
 		<option value="//api/name/swipesView:numberOfItemsInSection:">- swipesView:numberOfItemsInSection:</option>
+		
+		<option value="//api/name/swipesView:numberOfSectionsInSwipesView:">- swipesView:numberOfSectionsInSwipesView:</option>
+		
+		<option value="//api/name/swipesView:postSwipeOperationAtIndexPath:">- swipesView:postSwipeOperationAtIndexPath:</option>
+		
+		<option value="//api/name/swipesView:sizeForItemAtIndexPath:">- swipesView:sizeForItemAtIndexPath:</option>
 		
 	</optgroup>
 	
@@ -97,6 +99,60 @@
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>UISwipesViewDataSource is a common protocol for data containment, made specifically for <a href="../Classes/UISwipesView.html">UISwipesView</a>. The UISwipesViewDataSource works just like any other UIKit dataSource, and the following is a basic implementation of UISwipesViewDataSource:</p>
+
+<pre><code>@interface BasicSwipes () &lt;UISwipesViewDataSource&gt;
+@property (strong, nonatomic) NSMutableArray *cardData;
+@property (strong, nonatomic) CGRect screenBounds;
+@end
+
+@implementation BasicSwipes
+
+ - (void)viewDidLoad {
+     [super viewDidLoad];
+
+     self.screenBounds = [[UIScreen mainScreen] bounds];
+     self.cardData = [[NSMutableArray alloc] initWithArray:@[ @1, @11, @111 ]];
+
+     UISwipesView *swipesView = [[UISwipesView alloc] initWithFrame:self.screenBounds];
+     [self.view addSubview:swipesView];
+     [swipesView setDataSource:self];
+
+     [swipesView registerClass:[BasicCardCell class] forCellWithReuseIdentifier:@"BasicCardCell"];
+
+ }
+ - (NSInteger)swipesView:(UISwipesView *)swipesView numberOfItemsInSection:(NSInteger) nis {
+    return self.cardData.count;
+ }
+
+ - (CGPoint)swipesView:(UISwipesView *)swipesView centerForItemAtIndexPath:(NSIndexPath *)indexPath {
+     return CGPointMake(self.screenBounds.width * .50f, self.screenBounds.height * .35f);
+ }
+
+ - (CGSize)swipesView:(UISwipesView *)swipesView sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+     CGFloat defaultCellSize = self.screenBounds.size.width;
+     return CGSizeMake(defaultCellSize * .85f, defaultCellSize * .55f);
+ }
+
+ - (void)swipesView:(UISwipesView *)swipesView postSwipeOperationAtIndexPath:(NSIndexPath*)indexPath {
+     [self.cardData removeObjectAtIndex:indexPath.item];
+ }
+
+ - (UISwipesViewCell *)swipesView:(UISwipesView *)swipesView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+     BasicCardCell *cell = (BasicCardCell*)[swipesView dequeueReusableCellWithReuseIdentifier:@"BasicCardCell" forIndexPath:indexPath];
+     cell.label.text = [NSString stringWithFormat:@"%@", self.cardData[indexPath.item]];
+
+     return cell;
+ }
+ @end
+</code></pre>
+					</div>
+					
+					
 
 					
 					
@@ -109,8 +165,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/numberOfSectionsInSwipesView:" title="numberOfSectionsInSwipesView:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/numberOfSectionsInSwipesView:">&ndash;&nbsp;numberOfSectionsInSwipesView:</a></code>
+	<a name="//api/name/swipesView:numberOfSectionsInSwipesView:" title="swipesView:numberOfSectionsInSwipesView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipesView:numberOfSectionsInSwipesView:">&ndash;&nbsp;swipesView:numberOfSectionsInSwipesView:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -119,7 +175,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (int)numberOfSectionsInSwipesView:(UISwipesView *)<em>swipesView</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (int)swipesView:(UISwipesView *)<em>swipesView</em> numberOfSectionsInSwipesView:(UISwipesView *)<em>swipesView</em></code></div>
 
 		    
 		</div>
@@ -141,8 +197,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/swipesView:layout:centerForItemAtIndexPath:" title="swipesView:layout:centerForItemAtIndexPath:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/swipesView:layout:centerForItemAtIndexPath:">&ndash;&nbsp;swipesView:layout:centerForItemAtIndexPath:</a></code>
+	<a name="//api/name/swipesView:centerForItemAtIndexPath:" title="swipesView:centerForItemAtIndexPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipesView:centerForItemAtIndexPath:">&ndash;&nbsp;swipesView:centerForItemAtIndexPath:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -151,14 +207,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (CGPoint)swipesView:(UISwipesView *)<em>swipesView</em> layout:(UISwipesViewLayout *)<em>swipesViewLayout</em> centerForItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (CGPoint)swipesView:(UISwipesView *)<em>swipesView</em> centerForItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/swipesView:layout:sizeForItemAtIndexPath:" title="swipesView:layout:sizeForItemAtIndexPath:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/swipesView:layout:sizeForItemAtIndexPath:">&ndash;&nbsp;swipesView:layout:sizeForItemAtIndexPath:</a></code>
+	<a name="//api/name/swipesView:sizeForItemAtIndexPath:" title="swipesView:sizeForItemAtIndexPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipesView:sizeForItemAtIndexPath:">&ndash;&nbsp;swipesView:sizeForItemAtIndexPath:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -167,7 +223,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (CGSize)swipesView:(UISwipesView *)<em>swipesView</em> layout:(UISwipesViewLayout *)<em>swipesViewLayout</em> sizeForItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (CGSize)swipesView:(UISwipesView *)<em>swipesView</em> sizeForItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
 
 		    
 		</div>
@@ -189,8 +245,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/swipesView:deleteItemFromDataSourceAtIndexPath:" title="swipesView:deleteItemFromDataSourceAtIndexPath:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/swipesView:deleteItemFromDataSourceAtIndexPath:">&ndash;&nbsp;swipesView:deleteItemFromDataSourceAtIndexPath:</a></code>
+	<a name="//api/name/swipesView:postSwipeOperationAtIndexPath:" title="swipesView:postSwipeOperationAtIndexPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipesView:postSwipeOperationAtIndexPath:">&ndash;&nbsp;swipesView:postSwipeOperationAtIndexPath:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -199,7 +255,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (void)swipesView:(UISwipesView *)<em>swipesView</em> deleteItemFromDataSourceAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)swipesView:(UISwipesView *)<em>swipesView</em> postSwipeOperationAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
 
 		    
 		</div>
