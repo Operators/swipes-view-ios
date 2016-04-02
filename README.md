@@ -50,7 +50,6 @@ A basic example of a [UISwipesViewCell](http://operators.github.io/swipes-view-i
 @interface BasicCardCell : UISwipesViewCell
 @property (strong, nonatomic) UILabel *label;
 @end
-
 ```
 
 A basic example of a [UISwipesViewCell](http://operators.github.io/swipes-view-ios/Classes/UISwipesViewCell.html) implementation accepting data would look as follows:
@@ -62,7 +61,6 @@ A basic example of a [UISwipesViewCell](http://operators.github.io/swipes-view-i
     
     return cell;
 }
-
 ```
 
 Automating Swipes
