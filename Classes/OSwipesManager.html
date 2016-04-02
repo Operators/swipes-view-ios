@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>OSwipesManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">SwipesObjCExamples </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Operators</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/swipeOperation">swipeOperation</option>
+		
+		<option value="//api/name/swipesCard">swipesCard</option>
+		
+		<option value="//api/name/swipesDelegate">swipesDelegate</option>
+		
+		<option value="//api/name/swipesView">swipesView</option>
+		
+		<option value="//api/name/swipesViewLayout">swipesViewLayout</option>
+		
+		<option value="//api/name/touchPosition">touchPosition</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/EXTRA_SPACE">+ EXTRA_SPACE</option>
+		
+		<option value="//api/name/SWIPE_DIVISOR">+ SWIPE_DIVISOR</option>
+		
+		<option value="//api/name/TOUCH_ABOVE">+ TOUCH_ABOVE</option>
+		
+		<option value="//api/name/TOUCH_BELOW">+ TOUCH_BELOW</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/checkForSwipe">- checkForSwipe</option>
+		
+		<option value="//api/name/getExitRotation:withFactor:">- getExitRotation:withFactor:</option>
+		
+		<option value="//api/name/getSwipeOffset">- getSwipeOffset</option>
+		
+		<option value="//api/name/handleSwipeGesture:">- handleSwipeGesture:</option>
+		
+		<option value="//api/name/initWithSwipesView:andLayout:">- initWithSwipesView:andLayout:</option>
+		
+		<option value="//api/name/processSwipe:">- processSwipe:</option>
+		
+		<option value="//api/name/swipedBeyondBottomEdge">- swipedBeyondBottomEdge</option>
+		
+		<option value="//api/name/swipedBeyondLeftEdge">- swipedBeyondLeftEdge</option>
+		
+		<option value="//api/name/swipedBeyondRightEdge">- swipedBeyondRightEdge</option>
+		
+		<option value="//api/name/swipedBeyondTopEdge">- swipedBeyondTopEdge</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">OSwipesManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>UIPanGestureRecognizer</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>UIGestureRecognizerDelegate</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>OSwipesManager.h<br />OSwipesManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The Operators Swipes Manager is an abstraction of swipe operations (in 4 directions). It
+will allow the swiping away of the currently viewed card (or View), to the top, bottom,
+left or right of the screen (but only if the message [OSwipesManagerDelegate isAllowed:Directions] returns true).</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/swipesDelegate" title="swipesDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipesDelegate">&nbsp;&nbsp;swipesDelegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic) id&lt;OSwipesManagerDelegate&gt; swipesDelegate</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swipeOperation" title="swipeOperation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipeOperation">&nbsp;&nbsp;swipeOperation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic) Directions *swipeOperation</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swipesCard" title="swipesCard"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipesCard">&nbsp;&nbsp;swipesCard</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic) UISwipesViewCell *swipesCard</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swipesView" title="swipesView"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipesView">&nbsp;&nbsp;swipesView</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic) UISwipesView *swipesView</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swipesViewLayout" title="swipesViewLayout"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipesViewLayout">&nbsp;&nbsp;swipesViewLayout</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic) UISwipesViewLayout *swipesViewLayout</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/touchPosition" title="touchPosition"></a>
+	<h3 class="method-title"><code><a href="#//api/name/touchPosition">&nbsp;&nbsp;touchPosition</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (assign, nonatomic) int touchPosition</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithSwipesView:andLayout:" title="initWithSwipesView:andLayout:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithSwipesView:andLayout:">&ndash;&nbsp;initWithSwipesView:andLayout:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithSwipesView:(UISwipesView *)<em>view</em> andLayout:(UISwipesViewLayout *)<em>layout</em></code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/TOUCH_ABOVE" title="TOUCH_ABOVE"></a>
+	<h3 class="method-title"><code><a href="#//api/name/TOUCH_ABOVE">+&nbsp;TOUCH_ABOVE</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)TOUCH_ABOVE</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/TOUCH_BELOW" title="TOUCH_BELOW"></a>
+	<h3 class="method-title"><code><a href="#//api/name/TOUCH_BELOW">+&nbsp;TOUCH_BELOW</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)TOUCH_BELOW</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/SWIPE_DIVISOR" title="SWIPE_DIVISOR"></a>
+	<h3 class="method-title"><code><a href="#//api/name/SWIPE_DIVISOR">+&nbsp;SWIPE_DIVISOR</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)SWIPE_DIVISOR</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/EXTRA_SPACE" title="EXTRA_SPACE"></a>
+	<h3 class="method-title"><code><a href="#//api/name/EXTRA_SPACE">+&nbsp;EXTRA_SPACE</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)EXTRA_SPACE</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/handleSwipeGesture:" title="handleSwipeGesture:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/handleSwipeGesture:">&ndash;&nbsp;handleSwipeGesture:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)handleSwipeGesture:(UIPanGestureRecognizer *)<em>sender</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getExitRotation:withFactor:" title="getExitRotation:withFactor:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getExitRotation:withFactor:">&ndash;&nbsp;getExitRotation:withFactor:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (CGFloat)getExitRotation:(Directions *)<em>swipeOperation</em> withFactor:(CGFloat)<em>factor</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSwipeOffset" title="getSwipeOffset"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSwipeOffset">&ndash;&nbsp;getSwipeOffset</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (CGFloat)getSwipeOffset</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swipedBeyondRightEdge" title="swipedBeyondRightEdge"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipedBeyondRightEdge">&ndash;&nbsp;swipedBeyondRightEdge</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)swipedBeyondRightEdge</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swipedBeyondLeftEdge" title="swipedBeyondLeftEdge"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipedBeyondLeftEdge">&ndash;&nbsp;swipedBeyondLeftEdge</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)swipedBeyondLeftEdge</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swipedBeyondTopEdge" title="swipedBeyondTopEdge"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipedBeyondTopEdge">&ndash;&nbsp;swipedBeyondTopEdge</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)swipedBeyondTopEdge</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swipedBeyondBottomEdge" title="swipedBeyondBottomEdge"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipedBeyondBottomEdge">&ndash;&nbsp;swipedBeyondBottomEdge</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)swipedBeyondBottomEdge</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/processSwipe:" title="processSwipe:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/processSwipe:">&ndash;&nbsp;processSwipe:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)processSwipe:(Directions *)<em>direction</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/checkForSwipe" title="checkForSwipe"></a>
+	<h3 class="method-title"><code><a href="#//api/name/checkForSwipe">&ndash;&nbsp;checkForSwipe</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)checkForSwipe</code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 Operators. All rights reserved. Updated: 2016-04-02</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
