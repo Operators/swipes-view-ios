@@ -1,12 +1,12 @@
-# Swipes View Library (iOS)
+# Swipes View Framework (iOS)
 [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) (a Tinder-like View) displays **views (or cards) to be swiped** in all **directions of your choice** and also allows you to **programatically swipe** (with a button or a command).
 
 ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/basic.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/components.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/advanced.gif "UISwipesView")
 
 On this page, you can:
-* [Download the latest version](https://github.com/Operators/swipes-view-ios/files/201709/Swipes.zip) of the library
-* Download the [Swipes View Library and Objective-C Examples](https://github.com/Operators/swipes-view-ios/files/201708/SwipesObjCExamples.zip)
-* Or download the [Swipes View Library and Swift Examples](https://github.com/Operators/swipes-view-ios/files/201707/SwipesSwiftExamples.zip)
+* [Download the latest version](https://github.com/Operators/swipes-view-ios/files/208813/Swipes.zip) of the framework
+* Download the [Swipes View Framework and Objective-C Examples](https://github.com/Operators/swipes-view-ios/files/208814/SwipesObjCExamples.zip)
+* Or download the [Swipes View Framework and Swift Examples](https://github.com/Operators/swipes-view-ios/files/208812/SwipesSwiftExamples.zip)
 * Check out [How to set up the UISwipesView](https://github.com/Operators/swipes-view-ios#setup)
 * Check out [How to pass data](https://github.com/Operators/swipes-view-ios#passing-data)
 * Check out [How to automate swipes](https://github.com/Operators/swipes-view-ios#automating-swipes)
