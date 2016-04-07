@@ -181,22 +181,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/swipesView:numberOfItemsInSection:" title="swipesView:numberOfItemsInSection:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/swipesView:numberOfItemsInSection:">&ndash;&nbsp;swipesView:numberOfItemsInSection:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (int)swipesView:(UISwipesView *)<em>swipesView</em> numberOfItemsInSection:(NSInteger)<em>section</em></code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/swipesView:centerForItemAtIndexPath:" title="swipesView:centerForItemAtIndexPath:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/swipesView:centerForItemAtIndexPath:">&ndash;&nbsp;swipesView:centerForItemAtIndexPath:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -206,10 +190,57 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets up and returns the center position in the <a href="../Classes/UISwipesView.html">UISwipesView</a>.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (CGPoint)swipesView:(UISwipesView *)<em>swipesView</em> centerForItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>swipesView</code></th>
+						<td><p>The Swipes View that can be used as a position reference.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indexPath</code></th>
+						<td><p>The position in the Swipes View of the <a href="../Classes/UISwipesViewCell.html">UISwipesViewCell</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The CGPoint in the Swipes View of the <a href="../Classes/UISwipesViewCell.html">UISwipesViewCell</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -222,10 +253,120 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets up and returns the size in the <a href="../Classes/UISwipesView.html">UISwipesView</a>.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (CGSize)swipesView:(UISwipesView *)<em>swipesView</em> sizeForItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>swipesView</code></th>
+						<td><p>The Swipes View that can be used as a position reference.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indexPath</code></th>
+						<td><p>The position in the Swipes View of the <a href="../Classes/UISwipesViewCell.html">UISwipesViewCell</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The CGSize within the Swipes View of the <a href="../Classes/UISwipesViewCell.html">UISwipesViewCell</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/swipesView:numberOfItemsInSection:" title="swipesView:numberOfItemsInSection:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/swipesView:numberOfItemsInSection:">&ndash;&nbsp;swipesView:numberOfItemsInSection:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets up and returns the count in the <a href="../Classes/UISwipesView.html">UISwipesView</a> within a section.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)swipesView:(UISwipesView *)<em>swipesView</em> numberOfItemsInSection:(NSInteger)<em>section</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>swipesView</code></th>
+						<td><p>The Swipes View that can be used as a position reference.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indexPath</code></th>
+						<td><p>The position in the Swipes View of the <a href="../Classes/UISwipesViewCell.html">UISwipesViewCell</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The count of items in the Swipes View Section</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -238,10 +379,57 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets up and returns a <a href="../Classes/UISwipesViewCell.html">UISwipesViewCell</a> in the <a href="../Classes/UISwipesView.html">UISwipesView</a>.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (UISwipesViewCell *)swipesView:(UISwipesView *)<em>swipesView</em> cellForItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>swipesView</code></th>
+						<td><p>The Swipes View that can be used as a position reference.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indexPath</code></th>
+						<td><p>The position in the Swipes View of the <a href="../Classes/UISwipesViewCell.html">UISwipesViewCell</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The cell data populated in the Swipes View Cell</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -254,10 +442,52 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Is called after a Swipe Operation, and allows clean up of your data (deletions, moves, etc.).</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (void)swipesView:(UISwipesView *)<em>swipesView</em> postSwipeOperationAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>swipesView</code></th>
+						<td><p>The Swipes View that can be used as a position reference.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indexPath</code></th>
+						<td><p>The position in the Swipes View of the <a href="../Classes/UISwipesViewCell.html">UISwipesViewCell</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>
@@ -275,7 +505,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Operators. All rights reserved. Updated: 2016-04-02</p>
+						<p class="copyright">Copyright &copy; 2016 Operators. All rights reserved. Updated: 2016-04-07</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

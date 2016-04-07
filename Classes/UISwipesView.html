@@ -56,6 +56,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/count">count</option>
+		
 		<option value="//api/name/dataSource">dataSource</option>
 		
 	</optgroup>
@@ -77,6 +79,8 @@
 		<option value="//api/name/dequeueReusableCellWithReuseIdentifier:forIndexPath:">- dequeueReusableCellWithReuseIdentifier:forIndexPath:</option>
 		
 		<option value="//api/name/indexPathForItemAtPoint:">- indexPathForItemAtPoint:</option>
+		
+		<option value="//api/name/insertItemsAtIndexPaths:">- insertItemsAtIndexPaths:</option>
 		
 		<option value="//api/name/performBatchUpdates:completion:">- performBatchUpdates:completion:</option>
 		
@@ -134,7 +138,7 @@
  // Or from Storyboard Outlet (self.swipesView)
 
  swipesView.dataSource = someController;
- // Or Class the implements UISwipesViewDataSource
+ // Or Class that implements UISwipesViewDataSource
 </code></pre>
 					</div>
 					
@@ -167,6 +171,22 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/count" title="count"></a>
+	<h3 class="method-title"><code><a href="#//api/name/count">&nbsp;&nbsp;count</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSInteger count</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/setAllowedDirections:" title="setAllowedDirections:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/setAllowedDirections:">&ndash;&nbsp;setAllowedDirections:</a></code>
 </h3>
@@ -176,10 +196,49 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the horizontal and vertical swiping directions enabled, and
+is automatically called when set in IB via the &ldquo;direction_*&rdquo; properties.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (void)setAllowedDirections:(NSArray *)<em>allowed</em></code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Objective-C Usage Example:</br></p>
+
+<p>UISwipesView *swipesView = [[UISwipesView alloc] init];
+// Or from Storyboard Outlet (self.swipesView)</p>
+
+<p>NSArray * directions = @[[Directions LEFT], <a href="../Classes/Directions.html#//api/name/RIGHT">[Directions RIGHT]</a>];
+// Or from Storyboard Options (Direction left, &hellip;)</p>
+
+<p>[swipesView setAllowedDirections:directions];</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -192,42 +251,35 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>The left swipe callback that performs the swipe operation.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (void)performSwipeLeft</code></div>
 
 		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/performSwipeRight" title="performSwipeRight"></a>
-	<h3 class="method-title"><code><a href="#//api/name/performSwipeRight">&ndash;&nbsp;performSwipeRight</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (void)performSwipeRight</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/performSwipeUp" title="performSwipeUp"></a>
-	<h3 class="method-title"><code><a href="#//api/name/performSwipeUp">&ndash;&nbsp;performSwipeUp</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (void)performSwipeUp</code></div>
+			
 
-		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -240,10 +292,117 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>The down swipe callback that performs the swipe operation.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (void)performSwipeDown</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/performSwipeRight" title="performSwipeRight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/performSwipeRight">&ndash;&nbsp;performSwipeRight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The right swipe callback that performs the swipe operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)performSwipeRight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/performSwipeUp" title="performSwipeUp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/performSwipeUp">&ndash;&nbsp;performSwipeUp</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The up swipe callback that performs the swipe operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)performSwipeUp</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -256,10 +415,36 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>The collection setter for Swipe Delegate changes.<br/><br/>
+This method (and the related collection) allows for multiple delegates for the swipes</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>+ (void)addUISwipesViewDelegate:(id&lt;UISwipesViewDelegate&gt;)<em>newDelegate</em></code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UISwipesView.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -358,6 +543,22 @@
 		    
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/insertItemsAtIndexPaths:" title="insertItemsAtIndexPaths:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/insertItemsAtIndexPaths:">&ndash;&nbsp;insertItemsAtIndexPaths:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)insertItemsAtIndexPaths:(NSArray&lt;NSIndexPath*&gt; *)<em>indexPaths</em></code></div>
+
+		    
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -373,7 +574,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Operators. All rights reserved. Updated: 2016-04-02</p>
+						<p class="copyright">Copyright &copy; 2016 Operators. All rights reserved. Updated: 2016-04-07</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
