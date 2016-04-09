@@ -1,6 +1,8 @@
 # Swipes View Framework (iOS)
 [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) (a Tinder-like View) displays **views (or cards) to be swiped** in all **directions of your choice** and also allows you to **programatically swipe** (with a button or a command).
 
+Looking for the [Swipes Android Library](https://github.com/Operators/swipes-view-android)?
+
 ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/basic.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/components.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/advanced.gif "UISwipesView")
 
 On this page, you can:
