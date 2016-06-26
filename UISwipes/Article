@@ -1,0 +1,23 @@
+Apps like Tinder started a new UX Paradigm (Right Swipe, if you like!)
+
+The User Experience (UX) Right Swipe Paradigm is one of the best social innovations since the Guillotine. Just Kidding, but seriously in apps like Tinder, BarkBuddy and others, it allows you to swipe to the left if you’re not interested in something, and to the right if you are. A perfect display of how simple and effective this swipe action is, would be in the Real Life Tinder Video:
+https://www.youtube.com/watch?v=97YpoME3mx0
+
+This paradigm is actually quite natural (as you may have seen), and many would say addictive. The addictive phenomenon likely has something to do with the psychology of “collecting favourites” as well as “casting something aside". If you could make an addictive swiping app, what kind of swiping app would you like to make (or see)?
+
+So on to how this could benefit you as an App User/Developer:
+
+There are many uses for Card Swiping that have already been done, but could possibly be improved upon with new ideas. Also, if you ever wanted to have that swiping action in your favourite app, resources online are in the lot but not easily customised (or easy to use/run).
+
+Looking at what was available, we at Operators decided to give it a try and recreate that swiping action for as many apps as possible (including our own). So without further ado, the Swipes Android Library and UISwipes iOS Framework are now available to download from Github.
+
+So if you're looking to simply create a flash card app, or maybe even the next best swiping app/game out there, examples are available now for the Swipes Android Library in Eclipse, and in Android Studio as well as examples of the UISwipes iOS Framework in XCode (using Objective-C) and finally XCode (using Swift).
+
+One of the upsides of the ‘Swiping Card Movement’ in mobile application development is that there are still two more directions to swipe to (well until we go diagonally at least)! As a shameless plug, Reel Life will be Dog Fooding/Champagning the library and framework in our Android and iOS apps respectively in all four major directions. So keep an eye out for that Right Swipe of Pulp Fiction, and Left swipe of Unbreakable!
+
+Happy Swiping, :)
+
+References:
+- http://www.brit.co/swiping-apps/
+- https://github.com/search?utf8=%E2%9C%93&q=Swipe+iOS+Card+&type=Repositories&ref=searchresults
+- http://www.itsmakeable.com/unconventional-wisdom/good-user-experience-design-ux-can-do-what-now/

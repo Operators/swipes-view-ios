@@ -1,0 +1,16 @@
+commitMessage="Setting up UISwipes Carthage repo" && \
+VERSION=0.1.1 && \
+clear && printf '\e[3J' && \
+cd "/Users/christopher/git/Tool-Kit/MAC Guide - Utilities/SwipesView/iOSContent/UISwipes/" && \
+git add . && \
+git commit --author="Operators <operators.dba@gmail.com>"  -m "v$VERSION: $commitMessage" && \
+git tag $VERSION && \
+git push origin master && \
+git push origin master $VERSION
+
+
+cd "/Users/christopher/git/Tool-Kit/MAC Guide - Utilities/SwipesView/iOSContent/UISwipes/SwipesObjCExamples" && pod install
+
+cd "/Users/christopher/git/Tool-Kit/MAC Guide - Utilities/SwipesView/iOSContent/UISwipes/SwipesObjCExamples" && carthage update
+
+open "/Applications/Github Desktop.app"

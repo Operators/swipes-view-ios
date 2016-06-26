@@ -6,10 +6,6 @@ Looking for the [Swipes Android Library](https://github.com/Operators/swipes-vie
 ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/basic.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/components.gif "UISwipesView") ![swipes](https://raw.githubusercontent.com/Operators/swipes-view-ios/master/advanced.gif "UISwipesView")
 
 On this page, you can:
-* [Download the latest version](https://github.com/Operators/swipes-view-ios/files/216218/Swipes.zip) of the framework
-* Download the [Swipes View Framework and Objective-C Examples](https://github.com/Operators/swipes-view-ios/files/216219/SwipesObjCExamples.zip)
-* Or download the [Swipes View Framework and Swift Examples](https://github.com/Operators/swipes-view-ios/files/216217/SwipesSwiftExamples.zip)
-* Or maybe even download the [Swipes View Framework w/ Pages Objective-C Example](https://github.com/Operators/swipes-view-ios/files/216216/PagesObjCExamples.zip)
 * Check out [How to set up the UISwipesView](https://github.com/Operators/swipes-view-ios#setup)
 * Check out [How to pass data](https://github.com/Operators/swipes-view-ios#passing-data)
 * Check out [How to automate swipes](https://github.com/Operators/swipes-view-ios#automating-swipes)
@@ -20,6 +16,14 @@ Happy Swiping, :)
 
 Setup
 -----
+
+### Installation
+
+DataStoreAdvanced is available through [Carthage](https://github.com/Carthage/Carthage). To install
+it, simply add the following line to your Cartfile:
+```
+github "Operators/swipes-view-ios"
+```
 
 The [UISwipesView](http://operators.github.io/swipes-view-ios/Classes/UISwipesView.html) can be defined programmatically in Objective-C:
 ```    
