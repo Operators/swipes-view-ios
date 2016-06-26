@@ -1,5 +1,5 @@
 commitMessage="Updated version to correct increment" && \
-VERSION=1.1.16.06.26.1 && \
+VERSION=1.2.16.06.26.1 && \
 clear && printf '\e[3J' && \
 cd "/Users/christopher/git/Tool-Kit/MAC Guide - Utilities/SwipesView/iOSContent/UISwipes/" && \
 git add . && \
